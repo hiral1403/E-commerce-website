@@ -10,7 +10,7 @@ export const getSearchResults = createAsyncThunk(
   "/order/getSearchResults",
   async (keyword) => {
     const response = await axios.get(
-      `http://incomparable-boba-8e8d7c.netlify.app:5000/api/shop/search/${keyword}`
+      `http://https://e-commerce-website-4wog.onrender.com/api/shop/search/${keyword}`
     );
 
     return response.data;
