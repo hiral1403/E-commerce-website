@@ -18,7 +18,7 @@ export const fetchAllFilteredProducts = createAsyncThunk(
     });
 
     const result = await axios.get(
-      `http://incomparable-boba-8e8d7c.netlify.app/api/shop/products/get?${query}`
+      `http://incomparable-boba-8e8d7c.netlify.app:5000/api/shop/products/get?${query}`
     );
 
     console.log(result);
@@ -31,7 +31,7 @@ export const fetchProductDetails = createAsyncThunk(
   "/products/fetchProductDetails",
   async (id) => {
     const result = await axios.get(
-      `http://incomparable-boba-8e8d7c.netlify.app/api/shop/products/get/${id}`
+      `http://incomparable-boba-8e8d7c.netlify.app:5000/api/shop/products/get/${id}`
     );
 
     return result?.data;

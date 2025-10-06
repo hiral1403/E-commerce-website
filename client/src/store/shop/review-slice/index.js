@@ -10,7 +10,7 @@ export const addReview = createAsyncThunk(
   "/order/addReview",
   async (formdata) => {
     const response = await axios.post(
-      `http://incomparable-boba-8e8d7c.netlify.app/api/shop/review/add`,
+      `http://incomparable-boba-8e8d7c.netlify.app:5000/api/shop/review/add`,
       formdata
     );
 
@@ -20,7 +20,7 @@ export const addReview = createAsyncThunk(
 
 export const getReviews = createAsyncThunk("/order/getReviews", async (id) => {
   const response = await axios.get(
-    `http://incomparable-boba-8e8d7c.netlify.app/api/shop/review/${id}`
+    `http://incomparable-boba-8e8d7c.netlify.app:5000/api/shop/review/${id}`
   );
 
   return response.data;

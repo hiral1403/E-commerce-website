@@ -12,7 +12,7 @@ export const registerUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      "http://incomparable-boba-8e8d7c.netlify.app/api/auth/register",
+      "http://incomparable-boba-8e8d7c.netlify.app:5000/api/auth/register",
       formData,
       {
         withCredentials: true,
@@ -28,7 +28,7 @@ export const loginUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      "http://incomparable-boba-8e8d7c.netlify.app/api/auth/login",
+      "http://incomparable-boba-8e8d7c.netlify.app:5000/api/auth/login",
       formData,
       {
         withCredentials: true,
@@ -44,7 +44,7 @@ export const logoutUser = createAsyncThunk(
 
   async () => {
     const response = await axios.post(
-      "http://incomparable-boba-8e8d7c.netlify.app/api/auth/logout",
+      "http://incomparable-boba-8e8d7c.netlify.app:5000/api/auth/logout",
       {},
       {
         withCredentials: true,
@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      "http://incomparable-boba-8e8d7c.netlify.app/api/auth/check-auth",
+      "http://incomparable-boba-8e8d7c.netlify.app:5000/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
