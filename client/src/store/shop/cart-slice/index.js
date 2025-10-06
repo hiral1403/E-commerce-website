@@ -10,7 +10,7 @@ export const addToCart = createAsyncThunk(
   "cart/addToCart",
   async ({ userId, productId, quantity }) => {
     const response = await axios.post(
-      "http://https://e-commerce-website-4wog.onrender.com/api/shop/cart/add",
+      "https://e-commerce-website-4wog.onrender.com/api/shop/cart/add",
       {
         userId,
         productId,
@@ -26,7 +26,7 @@ export const fetchCartItems = createAsyncThunk(
   "cart/fetchCartItems",
   async (userId) => {
     const response = await axios.get(
-      `http://https://e-commerce-website-4wog.onrender.com/api/shop/cart/get/${userId}`
+      `https://e-commerce-website-4wog.onrender.com/api/shop/cart/get/${userId}`
     );
 
     return response.data;
@@ -37,7 +37,7 @@ export const deleteCartItem = createAsyncThunk(
   "cart/deleteCartItem",
   async ({ userId, productId }) => {
     const response = await axios.delete(
-      `http://https://e-commerce-website-4wog.onrender.com/api/shop/cart/${userId}/${productId}`
+      `https://e-commerce-website-4wog.onrender.com/api/shop/cart/${userId}/${productId}`
     );
 
     return response.data;
@@ -48,7 +48,7 @@ export const updateCartQuantity = createAsyncThunk(
   "cart/updateCartQuantity",
   async ({ userId, productId, quantity }) => {
     const response = await axios.put(
-      "http://https://e-commerce-website-4wog.onrender.com/api/shop/cart/update-cart",
+      "https://e-commerce-website-4wog.onrender.com/api/shop/cart/update-cart",
       {
         userId,
         productId,

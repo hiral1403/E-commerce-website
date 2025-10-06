@@ -13,7 +13,7 @@ export const createNewOrder = createAsyncThunk(
   "/order/createNewOrder",
   async (orderData) => {
     const response = await axios.post(
-      "http://https://e-commerce-website-4wog.onrender.com/api/shop/order/create",
+      "https://e-commerce-website-4wog.onrender.com/api/shop/order/create",
       orderData
     );
 
@@ -25,7 +25,7 @@ export const capturePayment = createAsyncThunk(
   "/order/capturePayment",
   async ({ paymentId, payerId, orderId }) => {
     const response = await axios.post(
-      "http://https://e-commerce-website-4wog.onrender.com/api/shop/order/capture",
+      "https://e-commerce-website-4wog.onrender.com/api/shop/order/capture",
       {
         paymentId,
         payerId,
@@ -41,7 +41,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
   "/order/getAllOrdersByUserId",
   async (userId) => {
     const response = await axios.get(
-      `http://https://e-commerce-website-4wog.onrender.com/api/shop/order/list/${userId}`
+      `https://e-commerce-website-4wog.onrender.com/api/shop/order/list/${userId}`
     );
 
     return response.data;
@@ -52,7 +52,7 @@ export const getOrderDetails = createAsyncThunk(
   "/order/getOrderDetails",
   async (id) => {
     const response = await axios.get(
-      `http://https://e-commerce-website-4wog.onrender.com/api/shop/order/details/${id}`
+      `https://e-commerce-website-4wog.onrender.com/api/shop/order/details/${id}`
     );
 
     return response.data;
